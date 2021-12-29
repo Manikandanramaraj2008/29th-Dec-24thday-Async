@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // async function foo(){
+        //     let res =await "hello world"
+        //     console.log(res);
+        // }
+        
+        //  console.log(foo())
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+// function getdata(){
+//     return new Promise((resolve,reject)=>{
+//         resolve("this is resolved")
+//     });
+// }
+
+// async function foo(){
+//     const res = await getdata();
+//     console.log(res)
+// }
+
+// console.log(foo());
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+// async function foo(){
+//    let res = await fetch("https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json");
+//     let result =await res.json();
+//     console.log(result)
+// }
+// foo()
+
+// 88888888888888888888888888888888888888888888888888888888
+
+
+// function getdata(){
+// return new Promise((resolve,reject)=>{
+//     setTimeout(()=>reject("this is rejected"),3000);
+// })
+
+// }
+
+// async function foo(){
+//     try{
+//         const data=await getdata();
+//     }catch(error){
+//         console.log(error);
+//     }
+// }
+// foo();
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// function getdata(){
+// return new Promise((resolve,reject)=>{
+//     setTimeout(()=>{resolve("this is resolved")},3000);
+// })
+
+// }
+
+// async function foo(){
+//     try{
+//         let res=await fetch("https://data.covid19india.org/v4/min/data.min.json");
+//         console.log(res);
+//          let result = await res.json()
+//         //  console.log(result);
+//         //   console.log(result.TN.districts.Chennai);
+//          return result;
+//     }catch(error){
+//         console.log(error);
+//     }
+// }
+// foo();
+
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+// async function foo(){
+//    let res = await fetch("https://api.covid19api.com/total/country/india");
+//     let result =await res.json();
+//     console.log(result)
+
+    
+// }
+// foo()
+
+// **********************************************
+
+// function getdata(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{resolve("This is resolved 2")},3000);
+//     });
+// }
+
+// function putdata(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{resolve("This is resolved 1")},2000);
+
+// });
+// }
+
+// async function foo(){
+//     const s1 = await getdata();
+//     const s2 = await putdata();
+//     console.log(s2);
+//     console.log(s1);
+ 
+// }
+// foo();
+
+// **********************************************
+
+// function getdata(){
+
+//     return fetch("https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json");
+// }
+// function putdata(){
+//     return fetch("https://data.covid19india.org/v4/min/data.min.json");
+// }
+
+// async function foo(){
+
+//     const s1 =await getdata();
+//     let result =await s1.json();
+//     console.log(result);
+//     const s2 =await putdata();
+//     let result2 =await s2.json();
+//     console.log(result2);
+//     // console.log(s1);
+//     // console.log(s2); 
+//     }
+//     foo();
+
+    // **********************************************
+
+    // function getdata(){
+    //     return fetch("https://data.covid19india.org/v4/min/data.min.json");
+
+    // } async function foo(){
+
+    //     let res = await getdata();
+    //     let result = await res.json();
+    //     console.log(result);
+    // }
+    // foo();
+
+
+ // **********************************************
+
+ async function foo(){
+     try{
+        let res = await fetch("https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json")
+      let result = await res.json();
+      console.log(result);
+      for(var i in result){
+          console.log(result[i].name);
+      }
+    }catch(error){
+        console.log(error);
+    }
+
+ }
+ foo();
+
+// **********************************************
+
+    </script>
+</body>
+</html>
